@@ -13,9 +13,10 @@ import os
 import argparse
 import timeit
 import torch
+from torch_geometric.data import Data
 from utils.load_mesh import LoadMesh
 from utils.embedding import Embedding
-from torch_geometric.data import Data
+
 
 # parse the input arguments
 if False:
