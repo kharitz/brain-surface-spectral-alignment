@@ -33,6 +33,7 @@ sh requirement.sh
 
 
 ## Usage
+The shell script run_prep.sh will align the graph spectral of individual samples of the dataset to a reference subject in the dataset 
 ```
 sh run_prep.sh
 ```
