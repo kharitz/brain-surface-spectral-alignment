@@ -1,7 +1,7 @@
 import os
 import torch
 import nibabel.freesurfer.io as fsio
-from gcnparc.utils import *
+from utils.utils import *
 
 class LoadMesh:
         
