@@ -1,8 +1,7 @@
-source /autofs/space/ballarat_001/users/kg149/anaconda3/etc/profile.d/conda.sh
+source PATH_TO_CONDA/conda.sh
 
-cd /autofs/space/ballarat_001/users/kg149/proj_gcn_parcellation
-conda activate proj_gcn_parcellation
-
+cd PATH_TO_PROJ_DIR
+conda activate ENV
 
 subjs=$(< mindboggle101_list.txt)
 
