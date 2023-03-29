@@ -1,7 +1,7 @@
 # Spectral Embedding alignment
 This repository impliments the python version of the graph spectral alignment. 
 
-![Alt Text](https://github.com/kharitz/brain-surface-spectral-alignment/fig1.png)
+![Alt Text](https://github.com/kharitz/brain-surface-spectral-alignment/blob/fb64ab4e944e8a20f3defe06147c0bd11a698465/fig1.png)
 
 If you find this work useful, please cite:
 ```
