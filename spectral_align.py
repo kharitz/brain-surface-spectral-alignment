@@ -19,31 +19,18 @@ from utils.embedding import Embedding
 
 
 # parse the input arguments
-if False:
-    parser = argparse.ArgumentParser()
-    parser.add_argument('-r', '--ref', required=True, help='directory for the reference brain')
-    parser.add_argument('-s', '--sub', required=True, help='directory for the subj/to be aligned brain')
-    parser.add_argument('-o', '--out', required=True, help='outut directory for saving data')
-    parser.add_argument('--hemi', default='lh', help='hemisphere to align (`lr` or `rh`)')
-    parser.add_argument('--eig', default=5, help='number of eigenvectors to decompose')
-    parser.add_argument('--sul', default=1, action='store_true', help='use sulcal depth for alignment matching')
-    parser.add_argument('--two_step', default='False', action='store_true', help='use first 3 less ambiguous eigenvectors to align')
-    parser.add_argument('--gpu', default='False', action='store_true', help='GPU or CPU')
-    parser.add_argument('--robust', default='False', action='store_true', help='robust vs faster alignment. fast - uses few eigen and partial matching')
-    parser.add_argument('--verbose', default='False', action='store_true', help='Verbose mode')
-    args = parser.parse_args()
-
-else:    
-    args = argparse.Namespace(ref='/autofs/space/ballarat_002/users/kg149/mindboggle/HLN-12-4', 
-                              sub='/autofs/space/ballarat_002/users/kg149/mindboggle/NKI-TRT-20-14', 
-                              out='/autofs/space/ballarat_001/users/kg149/proj_gcn_parcellation/processed_data', 
-                              hemi='rh',
-                              eig=5,
-                              sul=1,
-                              two_step=False,
-                              gpu=True,
-                              verbose=True,
-                              robust=True)
+parser = argparse.ArgumentParser()
+parser.add_argument('-r', '--ref', required=True, help='directory for the reference brain')
+parser.add_argument('-s', '--sub', required=True, help='directory for the subj/to be aligned brain')
+parser.add_argument('-o', '--out', required=True, help='outut directory for saving data')
+parser.add_argument('--hemi', default='lh', help='hemisphere to align (`lr` or `rh`)')
+parser.add_argument('--eig', default=5, help='number of eigenvectors to decompose')
+parser.add_argument('--sul', default=1, action='store_true', help='use sulcal depth for alignment matching')
+parser.add_argument('--two_step', default='False', action='store_true', help='use first 3 less ambiguous eigenvectors to align')
+parser.add_argument('--gpu', default='False', action='store_true', help='GPU or CPU')
+parser.add_argument('--robust', default='False', action='store_true', help='robust vs faster alignment. fast - uses few eigen and partial matching')
+parser.add_argument('--verbose', default='False', action='store_true', help='Verbose mode')
+args = parser.parse_args()
 
 # set robust vs fast parameters
 if args.robust == True:
