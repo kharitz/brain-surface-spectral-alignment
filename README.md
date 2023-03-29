@@ -26,11 +26,10 @@ sh requirement.sh
 - pytorch3d 
 - pytorch-geometric
 - nibabel
-- 
+
 ### Dataset
 -  The MindBoggle brain surfaces dataset is available to download [here](https://osf.io/nhtur/).
 -  Copy the FreeSurfer directory of the input dataset to the "data" folder.
-
 
 ## Usage
 The shell script run_prep.sh will align the graph spectral of individual samples of the dataset to a reference subject in the dataset 
