@@ -49,7 +49,7 @@ class Embedding:
         self.eig_vals, self.eig_vecs = self.eig_vals.to(device=self.device), self.eig_vecs.to(device=self.device)
         self.X = torch.matmul(self.eig_vecs, torch.diag(self.eig_vals ** (-0.5))) 
     
-    def align(self, ref, krot, matching_samples, w_sulcal, two_step, matching_mode, verbose):
+    def align(self, ref, krot, matching_samples, sulc, two_step, matching_mode, verbose):
         """
         Performs spectral alignment of brain surfaces 
 
@@ -70,7 +70,10 @@ class Embedding:
         Mw = self        
         Mo.n = ref.coords.shape[0]
         Mw.n = Mw.coords.shape[0]
-        
+        if sulc:
+            w_sulcal = 1
+        else:
+            w_sulcal = 0        
 
         Mw = flip_eigen_sign(Mo, Mw, krot, verbose)
 
