@@ -32,7 +32,19 @@ sh requirement.sh
 -  Copy the FreeSurfer directory of the input dataset to the "data" folder.
 
 ## Usage
-The shell script run_prep.sh will align the graph spectral of individual samples of the dataset to a reference subject in the dataset 
+The shell script run_prep.sh will align the graph spectral of individual samples of the dataset to a reference subject in the dataset.
 ```
 sh run_prep.sh
+```
+To align one sample to a reference
+```
+python spectral_align.py -r /path/to/reference/directory/ 
+                         -s /path/to/sample/directory/ 
+                         -o /path/to/output/directory/
+                         --hemi lh
+                         --eig 5
+                         --sul
+                         --robust 
+                         --gpu 
+                         --verbose
 ```
