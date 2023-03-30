@@ -25,7 +25,7 @@ parser.add_argument('-s', '--sub', required=True, help='directory for the subj/t
 parser.add_argument('-o', '--out', required=True, help='outut directory for saving data')
 parser.add_argument('--hemi', default='lh', help='hemisphere to align (`lr` or `rh`)')
 parser.add_argument('--eig', default=5, help='number of eigenvectors to decompose')
-parser.add_argument('--sul', default=1, action='store_true', help='use sulcal depth for alignment matching')
+parser.add_argument('--sul', default='True', action='store_true', help='use sulcal depth for alignment matching')
 parser.add_argument('--two_step', default='False', action='store_true', help='use first 3 less ambiguous eigenvectors to align')
 parser.add_argument('--gpu', default='False', action='store_true', help='GPU or CPU')
 parser.add_argument('--robust', default='False', action='store_true', help='robust vs faster alignment. fast - uses few eigen and partial matching')
